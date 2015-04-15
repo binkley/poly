@@ -1,0 +1,3 @@
+# Poly
+
+Demonstrate polyglot maven.
