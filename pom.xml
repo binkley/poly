@@ -18,7 +18,7 @@
 
     <groupId>xxx</groupId>
     <artifactId>poly</artifactId>
-    <version>1-SNAPSHOT</version>
+    <version>1</version>
 
     <name>Example YAML Polyglot Maven</name>
     <description>Demonstrate a polyglot Maven with YAML</description>
