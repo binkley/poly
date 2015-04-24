@@ -10,12 +10,18 @@
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.2.2.RELEASE</version>
+    </parent>
+
     <groupId>xxx</groupId>
     <artifactId>poly</artifactId>
-    <version>0</version>
+    <version>1</version>
 
     <name>Example YAML Polyglot Maven</name>
-    <description>Demonstrate a polyglot maven with YAML</description>
+    <description>Demonstrate a polyglot Maven with YAML</description>
     <url>http://binkley.blogspot.com</url>
     <inceptionYear>2015</inceptionYear>
 
@@ -28,11 +34,8 @@
     </licenses>
 
     <properties>
-        <git-commit-id-plugin.version>2.1.13</git-commit-id-plugin.version>
         <java.charset>UTF-8</java.charset>
         <java.version>1.8</java.version>
-        <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
-        <maven-jar-plugin.version>2.6</maven-jar-plugin.version>
         <project.build.outputEncoding>${java.charset}
         </project.build.outputEncoding>
         <project.build.sourceEncoding>${java.charset}
@@ -41,21 +44,12 @@
         </project.reporting.outputEncoding>
         <project.reporting.sourceEncoding>${java.charset}
         </project.reporting.sourceEncoding>
-        <spring-boot.version>1.2.3.RELEASE</spring-boot.version>
-        <spring.version>4.1.6.RELEASE</spring.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${spring.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>commons-logging</groupId>
-                    <artifactId>commons-logging</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 
@@ -73,32 +67,14 @@
         </resources>
         <plugins>
             <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
-                <version>${git-commit-id-plugin.version}</version>
                 <configuration>
-                    <generateGitPropertiesFile>true
-                    </generateGitPropertiesFile>
+                    <dateFormat>yyyy-MM-dd'T'hh:mm:ssZ</dateFormat>
                 </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>revision</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>${maven-jar-plugin.version}</version>
                 <configuration>
                     <archive>
                         <index>true</index>
@@ -119,17 +95,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>xxx.poly.Main</mainClass>
                 </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
