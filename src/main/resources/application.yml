@@ -1,0 +1,9 @@
+logging:
+  level:
+    org.springframework: WARN
+    xxx.poly.Main: WARN
+
+spring:
+  main:
+    show_banner: false
+    web_environment: false
