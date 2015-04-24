@@ -13,7 +13,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.2.3.RELEASE</version>
+        <version>1.2.2.RELEASE</version>
     </parent>
 
     <groupId>xxx</groupId>
@@ -21,7 +21,7 @@
     <version>1-SNAPSHOT</version>
 
     <name>Example YAML Polyglot Maven</name>
-    <description>Demonstrate a polyglot maven with YAML</description>
+    <description>Demonstrate a polyglot Maven with YAML</description>
     <url>http://binkley.blogspot.com</url>
     <inceptionYear>2015</inceptionYear>
 
@@ -50,14 +50,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>commons-logging</groupId>
-                    <artifactId>commons-logging</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 
@@ -75,20 +69,10 @@
         </resources>
         <plugins>
             <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
                 <configuration>
                     <dateFormat>yyyy-MM-dd'T'hh:mm:ssZ</dateFormat>
-                    <generateGitPropertiesFile>true
-                    </generateGitPropertiesFile>
                 </configuration>
             </plugin>
             <plugin>
