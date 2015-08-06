@@ -35,6 +35,7 @@
 
     <properties>
         <java.charset>UTF-8</java.charset>
+	<java.mainClass>xxx.poly.Main</java.mainClass>
         <java.version>1.8</java.version>
         <project.build.outputEncoding>${java.charset}
         </project.build.outputEncoding>
@@ -71,6 +72,13 @@
                 <artifactId>git-commit-id-plugin</artifactId>
                 <configuration>
                     <dateFormat>yyyy-MM-dd'T'hh:mm:ssZ</dateFormat>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>${java.mainClass}</mainClass>
                 </configuration>
             </plugin>
             <plugin>
