@@ -3,6 +3,11 @@
     <extension>
         <groupId>io.takari.polyglot</groupId>
         <artifactId>polyglot-yaml</artifactId>
-        <version>0.1.11</version>
+        <version>0.1.15</version>
+    </extension>
+    <extension>
+        <groupId>io.takari.polyglot</groupId>
+        <artifactId>polyglot-ruby</artifactId>
+        <version>0.1.15</version>
     </extension>
 </extensions>
