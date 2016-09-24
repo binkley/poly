@@ -26,7 +26,7 @@
     <inceptionYear>2015</inceptionYear>
 
     <scm>
-        <developerConnection>scm:git:file:///Users/Brian/src/java/poly</developerConnection>
+        <developerConnection>scm:git:git@github.com:binkley/poly.git</developerConnection>
     </scm>
 
     <licenses>
