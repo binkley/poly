@@ -25,6 +25,10 @@
     <url>http://binkley.blogspot.com</url>
     <inceptionYear>2015</inceptionYear>
 
+    <scm>
+        <developerConnection>scm:git:file:///Users/Brian/src/java/poly</developerConnection>
+    </scm>
+
     <licenses>
         <license>
             <name>Public Domain</name>
